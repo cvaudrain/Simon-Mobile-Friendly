@@ -108,7 +108,9 @@ $(document).keydown(function(){
 
   }
 })
-
+if(j == 5){
+  $("h1").text("Wow ur a god at the game")
+}
 })
 
 function flash(color){
