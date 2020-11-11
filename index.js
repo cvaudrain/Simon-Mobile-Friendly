@@ -16,7 +16,7 @@ function nextSequence(){
  var randomNumber = Math.floor(Math.random() * 4);
  return randomNumber
 }
-if(screen.availWidth <360 ){
+if(window.innerWidth <= 800 ){
 $("h1").text("Swipe to Begin!")
 }
 var j = 1  //keeps track of round count
@@ -36,7 +36,7 @@ $(document).keydown(function(){
 })
 //Handle TOUCHSCREEN Event
 $("body").on("touchmove", function(){
-  if(screen.availWidth <360 ){
+  if(window.innerWidth <= 800 ){
   $("img").addClass("inviso")
   if( gamePattern[0] == "dummy"){
   var randomChosenColor = buttonColors[nextSequence()] //this binds whichever color ( from 0-3 in the buttonColors Array) to the variable randomChosenColor. resets on each keydown currently
@@ -93,7 +93,7 @@ else{ //if the arrays are not equal length AND the current i index doesn't match
 
   console.log("game over")
   $("h1").text("L0SER! (Press Any Key to Restart)")
-  if(screen.availWidth < 360){
+  if(window.innerWidth <= 800){
   $("h1").text("L0SER! (Swipe to Restart)")
   }
   $("img").toggleClass("inviso")
